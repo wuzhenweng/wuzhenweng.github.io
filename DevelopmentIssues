@@ -1,0 +1,15 @@
+问题： idea git 更新出现stderr: error: bad signature fatal: index file corrupt
+状态：在idea更新文件的时候
+情况描述：正常在idea中更新项目，突然电脑蓝屏了（蓝屏的盖好喝的盖），然后重启之后再次更新项目就出现stderr: error: bad signature fatal: index file corrupt这样的错误提示
+
+原因：因为git在更新操作的时候会更新.git文件夹下的index文件，方便下一次更新的时候会找到更新的节点，而现在电脑突然崩溃，这个文件可能只更新了一部分，甚至直接导致这个文件破坏，所以再次更新的时候，发现这个index文件信息不全或者文件无法读取，这样就会出现上面的提示
+
+解决办法：
+
+到.git平行目录下依次执行以下命令
+
+$ rm -f .git/index     删除文件index，也可以手动删除
+
+$ git reset       这个是git命名可以恢复指定的版本号，这里没有就默认恢复上一次正确的文件
+
+重启即可
