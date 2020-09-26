@@ -1,0 +1,7 @@
+彻底解决Intellij IDEA中文乱码问题
+
+关于JAVA IDE开发工具，Eclipse系列和Intelli IDEA是大部分公司的主要选择，从开发者的选择角度，Intellij IDEA似乎比Eclipse系列更受欢迎一些。
+当我们使用Intellij IDEA开发时，我们发现出现中文乱码问题，
+造成中文乱码的根本原因时开发工具和系统环境编码格式不匹配，本篇采用理论结合实际的角度，彻底解决该问题。
+
+https://blog.csdn.net/u010228798/article/details/93355667
